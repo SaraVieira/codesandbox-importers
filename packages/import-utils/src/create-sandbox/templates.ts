@@ -175,10 +175,6 @@ export function getTemplate(
   if (totalDependencies.indexOf("@sveltech/routify") > -1) {
     return "node";
   }
-  
-  if (totalDependencies.indexOf("vite") > -1) {
-    return "node";
-  }
 
   if (totalDependencies.indexOf("svelte") > -1) {
     return "svelte";
@@ -199,6 +195,7 @@ export function getTemplate(
     "ts-node",
     "@tensorflow/tfjs-node",
     "webpack-dev-server",
+    "vite"
   ];
   if (totalDependencies.some((dep) => nodeDeps.indexOf(dep) > -1)) {
     return "node";
